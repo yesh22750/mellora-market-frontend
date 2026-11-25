@@ -1,0 +1,131 @@
+@import "./base.css";
+@import "./layout.css";
+@import "./components.css";
+@import "./polish.css";
+
+/* Page-specific additions for the dedicated About route. */
+.about-page {
+    min-height: 60vh;
+}
+
+.about-hero {
+    min-height: 560px;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(31, 25, 20, .82), rgba(31, 25, 20, .38)), url("https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=2200") center/cover;
+}
+
+.about-hero-copy {
+    color: #fff;
+    max-width: 720px;
+}
+
+.about-hero h1 {
+    font-family: "Playfair Display";
+    font-weight: 500;
+    font-size: clamp(52px, 7vw, 86px);
+    line-height: .95;
+}
+
+.about-hero p {
+    max-width: 520px;
+    margin-top: 25px;
+    color: rgba(255, 255, 255, .86);
+    line-height: 1.8;
+}
+
+.about-story {
+    padding: 105px 8%;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.about-story h2 {
+    font-family: "Playfair Display";
+    font-weight: 500;
+    font-size: 55px;
+    line-height: .98;
+}
+
+.about-story-copy {
+    color: #776b5e;
+    line-height: 1.9;
+    max-width: 560px;
+}
+
+.about-story-copy p + p {
+    margin-top: 20px;
+}
+
+.about-story-copy .dark-btn {
+    margin-top: 28px;
+}
+
+.about-values {
+    padding: 0 8% 110px;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 18px;
+}
+
+.about-values article {
+    background: #ebe2d6;
+    padding: 36px;
+    min-height: 220px;
+}
+
+.about-values span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #8b7d6d;
+}
+
+.about-values h3 {
+    font-family: "Playfair Display";
+    font-size: 27px;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+
+.about-values p {
+    color: #75695b;
+    line-height: 1.75;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .about-story {
+        grid-template-columns:1fr;
+        gap: 35px;
+    }
+
+    .about-values {
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .about-hero {
+        min-height: 500px;
+        padding: 60px 25px;
+    }
+
+    .about-hero h1 {
+        font-size: 50px;
+    }
+
+    .about-story {
+        padding: 70px 20px;
+    }
+
+    .about-story h2 {
+        font-size: 42px;
+    }
+
+    .about-values {
+        padding: 0 20px 70px;
+    }
+}
